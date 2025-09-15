@@ -1,0 +1,248 @@
+/* pages/about/about.component.css */
+.about-hero {
+    background: linear-gradient(rgba(37, 99, 235, 0.9), rgba(37, 99, 235, 0.9)), 
+                url('assets/about-hero-bg.jpg') center/cover;
+    color: white;
+    padding: 5rem 0;
+    text-align: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .about-story {
+    background: #ffffff;
+  }
+  
+  .story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  
+  .story-content h2 {
+    color: #1e293b;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+  }
+  
+  .story-content p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #64748b;
+  }
+  
+  .story-image {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .img-responsive {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .values-section {
+    background: #f8fafc;
+    padding: 4rem 0;
+  }
+  
+  .values-section h2 {
+    margin-bottom: 3rem;
+    color: #1e293b;
+  }
+  
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+  .value-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  .value-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: white;
+    font-size: 1.8rem;
+  }
+  
+  .value-card h3 {
+    color: #1e293b;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .value-card p {
+    color: #64748b;
+    line-height: 1.6;
+  }
+  
+  .team-section {
+    background: white;
+  }
+  
+  .team-section h2 {
+    margin-bottom: 3rem;
+    color: #1e293b;
+  }
+  
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+  }
+  
+  .team-member {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  .team-member:hover {
+    transform: translateY(-5px);
+  }
+  
+  .member-photo {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #e2e8f0;
+  }
+  
+  .member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .member-info h4 {
+    color: #1e293b;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .member-role {
+    color: #3b82f6;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .member-bio {
+    color: #64748b;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  .member-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #f1f5f9;
+    color: #64748b;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .social-link:hover {
+    background: #3b82f6;
+    color: white;
+    transform: translateY(-2px);
+  }
+  
+  .cta-section {
+    background: linear-gradient(135deg, #1e293b, #334155);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+  }
+  
+  .cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+  }
+  
+  .cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+  
+    .story-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  
+    .values-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .team-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .story-content h2,
+    .cta-content h2 {
+      font-size: 2rem;
+    }
+  }
