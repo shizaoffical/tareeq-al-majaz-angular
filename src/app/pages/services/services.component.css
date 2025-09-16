@@ -1,242 +1,119 @@
-/* pages/services/services.component.css */
-.services-hero {
-    color: white;
-    padding: 5rem 0;
-    text-align: center;
-  }
-  
+.process-section {
+  background: #f8fafc;
+  padding: 4rem 0;
+}
+
+.process-section h2 {
+  margin-bottom: 3rem ;
+  font-weight: 600;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.process-step {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto 1.5rem;
+}
+
+.step-content h4 {
+  color: #1e293b;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.step-content p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.cta-section {
+  background: linear-gradient(135deg, #1e293b, #334155);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: #1e293b;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: white;
+    font-size: 2.5rem;
   }
-  
-  .hero-subtitle {
-    font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.9);
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .main-services {
-    background: #ffffff;
-  }
-  
+
   .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
+    grid-template-columns: 1fr;
   }
-  
-  .service-card {
-    background: white;
-    border-radius: 1rem;
-    padding: 2.5rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-    position: relative;
+
+  .process-steps {
+    grid-template-columns: 1fr;
   }
-  
-  .service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-    border-color: #3b82f6;
-  }
-  
-  .service-card.featured {
-    border: 2px solid #3b82f6;
-    position: relative;
-  }
-  
-  .service-card.featured::before {
-    content: 'Most Popular';
-    position: absolute;
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #3b82f6;
-    color: white;
-    padding: 0.5rem 1.5rem;
-    border-radius: 2rem;
-    font-size: 0.875rem;
-    font-weight: 600;
-  }
-  
-  .service-icon {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-    border-radius: 50%;
-    display: flex;
+
+  .cta-buttons {
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 2rem;
-    color: white;
+  }
+
+  .service-card {
+    padding: 2rem;
+  }
+
+  .cta-content h2 {
     font-size: 2rem;
   }
-  
-  .service-content h3 {
-    color: #1e293b;
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
-  }
-  
-  .service-content p {
-    color: #64748b;
-    margin-bottom: 2rem;
-    line-height: 1.7;
-  }
-  
-  .service-features {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 2rem;
-  }
-  
-  .service-features li {
-    color: #64748b;
-    margin-bottom: 0.75rem;
-    position: relative;
-    padding-left: 1.5rem;
-  }
-  
-  .service-features li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: #10b981;
-    font-weight: bold;
-  }
-  
-  .service-price {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #3b82f6;
-    padding: 1rem;
-    background: #eff6ff;
-    border-radius: 0.5rem;
-    text-align: center;
-  }
-  
-  .process-section {
-    background: #f8fafc;
-    padding: 4rem 0;
-  }
-  
-  .process-section h2 {
-    margin-bottom: 3rem;
-    color: #1e293b;
-  }
-  
-  .process-steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-  }
-  
-  .process-step {
-    background: white;
-    border-radius: 1rem;
-    padding: 2rem;
-    text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    position: relative;
-  }
-  
-  .step-number {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin: 0 auto 1.5rem;
-  }
-  
-  .step-content h4 {
-    color: #1e293b;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .step-content p {
-    color: #64748b;
-    line-height: 1.6;
-  }
-  
-  .cta-section {
-    background: linear-gradient(135deg, #1e293b, #334155);
-    color: white;
-    padding: 4rem 0;
-    text-align: center;
-  }
-  
-  .cta-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: white;
-  }
-  
-  .cta-content p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    color: rgba(255, 255, 255, 0.9);
-  }
-  
-  .cta-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .btn-large {
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-  }
-  
-  .btn-secondary {
-    background: transparent;
-    color: white;
-    border: 2px solid white;
-  }
-  
-  .btn-secondary:hover {
-    background: white;
-    color: #1e293b;
-  }
-  
-  /* Mobile Responsive */
-  @media (max-width: 768px) {
-    .hero-content h1 {
-      font-size: 2.5rem;
-    }
-  
-    .services-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .process-steps {
-      grid-template-columns: 1fr;
-    }
-  
-    .cta-buttons {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .service-card {
-      padding: 2rem;
-    }
-  
-    .cta-content h2 {
-      font-size: 2rem;
-    }
-  }
+}

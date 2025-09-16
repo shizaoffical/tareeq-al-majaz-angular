@@ -1,91 +1,88 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-    <a class="navbar-brand" href="#">
-      <img src="../../../assets/images/logo.jpg" width="60px" />
-    </a>
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="../../../assets/images/logo.jpg" width="60px"/>
+        </a>
 
-    <button class="navbar-toggler" type="button" (click)="openMenu()">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <button class="navbar-toggler" type="button" (click)="openMenu()">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <!-- overlay -->
-    <div class="navbar-overlay" [class.active]="isMenuOpen" (click)="closeMenu()"></div>
+        <!-- overlay -->
+        <div class="navbar-overlay" [class.active]="isMenuOpen" (click)="closeMenu()"></div>
 
-    <div class="collapse navbar-collapse" id="navbarNav" [class.show]="isMenuOpen">
-      <button class="close-btn" (click)="closeMenu()">&times;</button>
+        <div class="collapse navbar-collapse" id="navbarNav" [class.show]="isMenuOpen">
+            <button class="close-btn" (click)="closeMenu()">&times;</button>
 
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" routerLink="/home">Home</a>
-        </li>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" routerLink="/home" routerLinkActive="active">Home</a>
 
-        <!-- Services dropdown -->
-        <li
-          class="nav-item dropdown"
-          (mouseenter)="openDropdown('services')"
-          (mouseleave)="closeDropdown()"
-        >
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="servicesDropdown"
-            role="button"
-            (click)="toggleDropdown($event, 'services')"
-          >
-            Services
-          </a>
-          <ul
-            class="dropdown-menu"
-            aria-labelledby="servicesDropdown"
-            [class.show]="openDropdownId === 'services'"
-          >
-            <li><a class="dropdown-item" href="#">Same Day Delivery</a></li>
-            <li><a class="dropdown-item" href="#">Next Day Delivery</a></li>
-            <li><a class="dropdown-item" href="#">Gift Delivery</a></li>
-            <li><a class="dropdown-item" href="#">Packages Delivery</a></li>
-            <li><a class="dropdown-item" href="#">Documents Delivery</a></li>
-          </ul>
-        </li>
+                </li>
+                <li class="nav-item dropdown" (mouseenter)="openDropdown('services')" (mouseleave)="closeDropdown()">
+                    <a class="nav-link dropdown-toggle" routerLink="/services" id="servicesDropdown" role="button" (click)="toggleDropdown($event, 'services')">
+                        Services
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="servicesDropdown" [class.show]="openDropdownId === 'services'">
+                        <li>
+                            <a class="dropdown-item" routerLink="/services">Same Day Delivery</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/services">Next Day Delivery</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/services">Gift Delivery</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/services">Packages Delivery</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/services">Documents Delivery</a>
+                        </li>
+                    </ul>
+                </li>
 
-        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/about-us">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/contact-us">Contact Us</a>
+                </li>
 
-        <!-- Location dropdown -->
-        <li
-          class="nav-item dropdown"
-          (mouseenter)="openDropdown('location')"
-          (mouseleave)="closeDropdown()"
-        >
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="locationDropdown"
-            role="button"
-            (click)="toggleDropdown($event, 'location')"
-          >
-            Location
-          </a>
-          <ul
-            class="dropdown-menu"
-            aria-labelledby="locationDropdown"
-            [class.show]="openDropdownId === 'location'"
-          >
-            <li><a class="dropdown-item" href="#dubai">Dubai</a></li>
-            <li><a class="dropdown-item" href="#sharjah">Sharjah</a></li>
-            <li><a class="dropdown-item" href="#ajman">Ajman</a></li>
-            <li><a class="dropdown-item" href="#fujairah">Fujairah</a></li>
-            <li><a class="dropdown-item" href="#ras-al-khaimah">Ras Al Khaimah</a></li>
-            <li><a class="dropdown-item" href="#um-al-quwain">Um Al Quwain</a></li>
-          </ul>
-        </li>
-      </ul>
+                <!-- Location dropdown -->
+                <li class="nav-item dropdown" (mouseenter)="openDropdown('location')" (mouseleave)="closeDropdown()">
+                    <a class="nav-link dropdown-toggle" routerLink="/location" id="locationDropdown" role="button" (click)="toggleDropdown($event, 'location')">
+                        Location
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="locationDropdown" [class.show]="openDropdownId === 'location'">
+                        <li>
+                            <a class="dropdown-item" routerLink="/location" >Dubai</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item"routerLink="/location">Sharjah</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/location">Ajman</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/location">Fujairah</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/location">Ras Al Khaimah</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/location">Um Al Quwain</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
 
-      <span class="navbar-text">
-        <a routerLink="/login">Profile</a>
-      </span>
+            <span class="navbar-text">
+                <a routerlink="/login">Profile</a>
+            </span>
+        </div>
     </div>
-  </div>
 </nav>
 
 <main></main>
