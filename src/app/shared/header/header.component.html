@@ -17,7 +17,7 @@
 
             <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link active" routerLink="/home" routerLinkActive="active">Home</a>
+                    <a class="nav-link active" routerLink="/home" routerLinkActive="active">Home</a>
 
                 </li>
                 <li class="nav-item dropdown" (mouseenter)="openDropdown('services')" (mouseleave)="closeDropdown()">
@@ -57,10 +57,10 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="locationDropdown" [class.show]="openDropdownId === 'location'">
                         <li>
-                            <a class="dropdown-item" routerLink="/location" >Dubai</a>
+                            <a class="dropdown-item" routerLink="/location">Dubai</a>
                         </li>
                         <li>
-                            <a class="dropdown-item"routerLink="/location">Sharjah</a>
+                            <a class="dropdown-item" routerLink="/location">Sharjah</a>
                         </li>
                         <li>
                             <a class="dropdown-item" routerLink="/location">Ajman</a>
@@ -77,10 +77,16 @@
                     </ul>
                 </li>
             </ul>
+            <div class="d-flex gap-2">
+                <span class="navbar-auth-btn text-white">
+                    <a routerLink="/login">Login</a>
+                </span>
+                <span class="navbar-auth-btn text-white">
+                    <a routerLink="/signup">Sign Up</a>
+                </span>
 
-            <span class="navbar-text">
-                <a routerlink="/login">Profile</a>
-            </span>
+            </div>
+
         </div>
     </div>
 </nav>

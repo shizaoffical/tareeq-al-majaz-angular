@@ -45,11 +45,87 @@ body {
   padding: 0;
 }
 
-a {
-  color: var(--text-color);
-  text-decoration: none;
+a {  text-decoration: none;
   transition: color var(--transition-speed) ease-in-out;
 }
+
+/* /////////////////////////////////////////////////////////////  Authentication pages  */
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background: var(--dropdown-hover);
+}
+
+.auth-card {
+  background: var(--white-color);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px var(--shadow-color);
+  width: 100%;
+  max-width: 400px;
+  transition: transform var(--transition-speed);
+}
+
+.auth-card:hover {
+  transform: translateY(-5px);
+}
+
+.auth-card h2 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.auth-card .form-control {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.8rem;
+  transition: border var(--transition-speed);
+}
+
+.auth-card .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px var(--primary-color);
+}
+
+.auth-card button {
+  background: var(--primary-color);
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem;
+  width: 100%;
+  color: var(--white-color);
+  font-weight: 500;
+  margin-top: 1rem;
+  transition: background var(--transition-speed);
+}
+
+.auth-card button:hover {
+  background: var(--hover-color);
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.auth-footer a {
+  cursor: pointer !important;
+  color: var(--primary-color) !important;
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+
+.auth-footer a:hover {
+  color: var(--hover-color);
+}
+
+
 
 /* /////////////////////////////////////////////////////////////  Navbar  */
 .navbar {
@@ -109,17 +185,17 @@ a {
   color: var(--primary-color) !important;
 }
 
-.navbar-text {
+.navbar-auth-btn {
   float: inline-end;
 }
-.navbar-text a {
+.navbar-auth-btn a {
   border: 1px solid var(--primary-color);
   border-radius: 8px;
   padding: 10px 20px;
   color: var(--white-color);
   background-color: var(--primary-color);
 }
-.navbar-text a:hover {
+.navbar-auth-btn a:hover {
   border: 1px solid var(--hover-color);
   background-color: var(--hover-color);
   color: var(--white-color);

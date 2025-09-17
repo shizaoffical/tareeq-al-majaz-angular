@@ -35,8 +35,25 @@ export const routes: Routes = [
       {
         path: 'location',
         loadComponent: () =>
-          import('./pages/location/location.component').then((m) => m.LocationComponent),
+          import('./pages/location/location.component').then(
+            (m) => m.LocationComponent
+          ),
       },
+      {
+        path: 'login',
+        loadComponent: () =>
+          import('./pages/auth/login/login.component').then(
+            (m) => m.LoginComponent
+          ),
+      },
+      {
+        path: 'signup',
+        loadComponent: () =>
+          import('./pages/auth/signup/signup.component').then(
+            (m) => m.SignupComponent
+          ),
+      },
+
       { path: '**', redirectTo: '/home' },
     ],
   },
