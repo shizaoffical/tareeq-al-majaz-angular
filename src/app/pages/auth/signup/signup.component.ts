@@ -15,6 +15,6 @@ export class SignupComponent {
   onSignup() {
     // Temporary storage
     localStorage.setItem('user', this.email);
-    alert('Signup successful ✅');
+    alert('Signup successful ');
   }
 }

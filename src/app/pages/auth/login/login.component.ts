@@ -14,10 +14,10 @@ export class LoginComponent {
 
   onLogin() {
     if (this.email === 'admin@example.com' && this.password === '1234') {
-      alert('Login successful ✅');
+      alert('Login successful ');
       localStorage.setItem('user', this.email); // temporary storage
     } else {
-      alert('Invalid credentials ❌');
+      alert('Invalid credentials ');
     }
   }
 }
